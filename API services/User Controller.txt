@@ -1,0 +1,72 @@
+package com.bca.major.proj.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.bca.major.proj.*;
+
+@CrossOrigin(origins="http://localhost:4200")
+@RestController
+@RequestMapping("/entry")
+
+public class UsersController {
+	
+	@Autowired
+	Userrepository userRepository;
+	
+	@GetMapping
+	String stayHome()
+	{
+		return "Try Again !!!";
+	}
+	
+    @PostMapping
+    @RequestMapping("/save")
+	Users saveentry(@RequestBody Users user){
+		return userRepository.save(user);
+	}
+	
+    @GetMapping
+    @RequestMapping("/list")
+	List<Users> getStudents(){
+		return userRepository.findAll();
+	}
+    
+    @GetMapping("/user/{id}")
+    public Users getNoteById(@PathVariable(value = "id") Long id) {
+        return userRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("User", "id", id));
+    }
+    
+    @PostMapping
+    @RequestMapping("/login")
+    public Users validateLogin(@RequestBody Users user)
+    {
+    	Users retUsr = new Users();
+    	List<Users> userList = null;
+    	userList = userRepository.findAll();
+    	if (userList.size() > 0)
+    	{
+    		for(Users usr : userList)
+    		{
+    			if(usr.getEmail().equals(user.getEmail()) && usr.getPassword().equals(user.getPassword()))
+    			{
+    				retUsr.setId(usr.getId());
+    				retUsr.setusername(usr.getusername());
+    				break;
+    			}
+    		}
+    	}
+    	return retUsr;
+    }
+
+
+}

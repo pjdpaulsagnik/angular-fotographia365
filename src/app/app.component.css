@@ -1,0 +1,27 @@
+button {
+    margin-right: 2rem;
+}
+
+#navbase {
+    background-image: url('../assets/bgstylecl.jpg');
+}
+
+#sidenavbar {
+    background-image: url('../assets/glxy.jpg');
+}
+
+#allcontentpagebackground {
+    background-image: url('../assets/glxy.jpg');
+}
+
+#searchsetup {
+    position: relative;
+    left: 340px;
+}
+
+@media only screen and (max-width:620px) {
+    /* For mobile phones: */
+    #navbase,#allcontentpagebackground{
+      width:100%;
+    }
+  }

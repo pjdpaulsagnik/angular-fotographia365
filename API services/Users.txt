@@ -1,0 +1,82 @@
+package com.bca.major.proj.model;
+
+import javax.persistence.Entity;
+
+import javax.persistence.EntityListeners;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@Entity
+@Table(name = "users")
+@EntityListeners(AuditingEntityListener.class)
+@JsonIgnoreProperties(allowGetters = true)
+
+public class Users {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long user_id;
+	@NotBlank
+	private String fullname;
+	@NotBlank
+	private String username;
+	@NotBlank
+	private String email;
+	@NotBlank
+	private String password;
+	@NotBlank
+	private String bio;
+	@NotBlank
+	private String usertype;
+	
+	public Long getId() {
+		return user_id;
+	}
+	public void setId(Long user_id) {
+		this.user_id = user_id;
+	}
+	public String getfullname() {
+		return fullname;
+	}
+	public void setfullname(String fullname) {
+		this.fullname = fullname;
+	}
+	public String getusername() {
+		return username;
+	}
+	public void setusername(String username) {
+		this.username = username;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getbio() {
+		return bio;
+	}
+	public void setbio(String bio) {
+		this.bio = bio;
+	}
+	public String getusertype() {
+		return usertype;
+	}
+	public void setusertype(String usertype) {
+		this.usertype = usertype;
+	}
+
+}
