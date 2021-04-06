@@ -4,7 +4,7 @@ The Project is developed under Two Frameworks - Angular 8 & Spring Boot.
 The project is about developing an Online-Photo Sharing social-media based platform.
 
 
-# Iggclone
+# Fotographia
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
 
