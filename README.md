@@ -37,3 +37,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ![plot](https://i.imgur.com/KQFB2fw.png)
 
+#Home Page
+
+![plot](https://i.imgur.com/EV7gOtW.png)
+
+
+
+
