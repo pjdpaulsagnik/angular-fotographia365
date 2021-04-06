@@ -45,6 +45,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ![plot](https://i.imgur.com/EV7gOtW.png)
 
-#
+# Upload a Post
+
+![plot](https://i.imgur.com/f6q1zgI.png)
+
+
 
 
