@@ -12,6 +12,19 @@ button {
 
 #allcontentpagebackground {
     background-image: url('../assets/glxy.jpg');
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    object-fit: cover; 
+}
+#Whole-Application-Content {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 86.3vh;
+    object-fit: cover; 
 }
 
 #searchsetup {
@@ -21,7 +34,24 @@ button {
 
 @media only screen and (max-width:620px) {
     /* For mobile phones: */
-    #navbase,#allcontentpagebackground{
-      width:100%;
+    button {
+        margin-right: 0rem;
     }
+    #navbase,#allcontentpagebackground{
+      width:99vw;
+    }
+    #allcontentpagebackground,#Whole-Application-Content {
+        height: 87vh;
+    }
+
+    
   }
+
+
+/* @media (min-width:414px) and (max-width:620px) {
+    For mobile phones:
+    #Whole-Application-Content{
+        height: 1000px;    
+    }    
+  } */
+
