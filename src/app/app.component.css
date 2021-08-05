@@ -12,25 +12,14 @@ button {
 
 #allcontentpagebackground {
     background-image: url('../assets/glxy.jpg');
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    object-fit: cover; 
-}
-#Whole-Application-Content {
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 86.3vh;
-    object-fit: cover; 
-}
 
+    
+}
+/* 
 #searchsetup {
     position: relative;
     left: 340px;
-}
+} */
 
 @media only screen and (max-width:620px) {
     /* For mobile phones: */
@@ -48,7 +37,18 @@ button {
   }
 
 
-/* @media (min-width:414px) and (max-width:620px) {
-      
-  } */
+@media (min-height:768px) and (max-height:1080px) {
+     #Whole-Application-Content {
+        /* Background image is centered vertically and horizontally at all times */
+        background-position: center center;
+
+
+        /* This is what makes the background image rescale based
+        on the container's size */
+        background-size:cover;
+        
+        min-height: 805px;
+
+    } 
+  }
 
